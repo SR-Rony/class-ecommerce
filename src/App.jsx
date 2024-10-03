@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Router from './route/Router'
+import publicRoute from './route/routes/PublicRoute'
+
 
 function App() {
 
+  const [allRoute,setAllroute] = useState([...publicRoute])
+
   return (
     <>
-      <h1>Welcoem to my React project</h1>
+      <Router allRoute={allRoute}/>
     </>
   )
 }
