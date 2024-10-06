@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash, } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { adminLogin } from "../../store/reducer/authReducer";
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -8,6 +10,8 @@ const AdminLogin = () => {
     email:'',
     password:''
   })
+
+  let dispatch = useDispatch()
 
   const handleChange = (e)=>{
     setData({
@@ -17,8 +21,9 @@ const AdminLogin = () => {
   }
 
   const handleSubmit =(e)=>{
-    console.log(data);
     e.preventDefault()
+    console.log(data);
+    dispatch(adminLogin(data))
   }
 
 
