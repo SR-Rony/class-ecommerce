@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {useDispatch} from 'react-redux'
-// import { adminLogin } from "../../store/reducer/authReducer";
+import { userRegistation } from "../../store/reducer/authReducer";
 
 const Registation = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,8 +26,8 @@ const Registation = () => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    // console.log(data);
-    // dispatch(adminLogin(data))
+    console.log(data);
+    dispatch(userRegistation(data))
 
   }
 

@@ -1,8 +1,10 @@
 const authRoute= require('express').Router()
-const { adminLogin, adminUser } = require('../controller/authController')
+const { adminLogin, handleLogin} = require('../controller/authController')
+const { handleRegistation } = require('../controller/userController')
 
 
-authRoute.get('/admin-user',adminUser)
+authRoute.post('/registation',handleRegistation)
+authRoute.post('/login',handleLogin)
 authRoute.post('/admin-login',adminLogin)
 
 

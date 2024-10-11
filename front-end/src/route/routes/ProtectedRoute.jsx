@@ -1,9 +1,13 @@
-import React from 'react'
+import { lazy } from "react";
 
-const ProtectedRoute = () => {
-  return (
-    <div>ProtectedRoute</div>
-  )
-}
+const Home = lazy(()=>import("../../views/pages/Home"))
+
+
+const ProtectedRoute = [
+    {
+        path: "/",
+        element: <Home/>
+    }
+]
 
 export default ProtectedRoute

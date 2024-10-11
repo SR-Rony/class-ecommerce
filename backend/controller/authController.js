@@ -1,13 +1,19 @@
+
+
+
+
+
+
 const adminLogin = (req,res)=>{
     console.log('data',req.body);
 }
 // 
-const adminUser = (req,res)=>{
-    res.send('i am admin user')
+const handleLogin = (req,res)=>{
+    console.log(req.body);
 }
 
 
 module.exports={
     adminLogin,
-    adminUser
+    handleLogin
 }

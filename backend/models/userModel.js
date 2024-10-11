@@ -30,7 +30,7 @@ const userSchema= new Schema({
     }
   },{timestamps:true});
 
-  const Users = model("Users",userSchema)
+  const User = model("Users",userSchema)
 
-  module.exports = Users;
+  module.exports = User;
 
